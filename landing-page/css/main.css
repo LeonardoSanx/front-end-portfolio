@@ -1,0 +1,658 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
+}
+
+a {
+  color: #1f1534;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+p {
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #7d7987;
+}
+
+button:hover {
+  transition-duration: 0.3s;
+}
+
+.clean-button {
+  background: white;
+  color: #458ff6;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 3rem 0;
+  height: 56px;
+  width: 200px;
+  border-radius: 40px;
+  border: solid #458ff6;
+  border-width: 1.4px;
+  cursor: pointer;
+}
+
+.clean-button:hover {
+  background: #458ff6;
+  color: white;
+}
+
+/* ------------------- HEADER -------------------- */
+
+.navbar {
+  top: 0;
+  background: white;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.circle {
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  margin: 0 0.5rem 0 1.5rem;
+  background: #458ff6;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle p {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+}
+
+.navbar h1 {
+  color: #233348;
+  font-size: 20px;
+}
+
+nav {
+  padding: 0 1.2rem;
+  flex: 1;
+  text-align: right;
+}
+
+nav ul li {
+  font-weight: 400;
+  font-size: 18px;
+  display: inline-block;
+  list-style: none;
+  margin: 0 0.4rem;
+}
+
+nav ul li a:hover {
+  color: #458ff6;
+}
+
+/* ------------------- SECTION-I --------#458FF6------------- */
+
+.section-i {
+  margin: 80px 1.2rem 0 1.2rem;
+  text-align: center;
+}
+
+.section-i img {
+  width: 100%;
+}
+
+.section-i h1 {
+  margin: 2rem 0 1.2rem;
+}
+
+.section-i button {
+  background: #458ff6;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 3rem 0;
+  height: 56px;
+  width: 200px;
+  border-radius: 40px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.section-i button:hover {
+  background: #233348;
+}
+
+/* ------------------- SERVICES --------#458FF6------------- */
+
+.services {
+  margin: 2.5rem;
+  text-align: center;
+}
+
+.services h2 {
+  margin: 1.2rem 0 1rem;
+}
+
+.line {
+  background: black;
+  display: inline-block;
+  margin: 1rem 0 2rem;
+  min-height: 0.1rem;
+  height: 2px;
+  width: 2.2rem;
+  border-radius: 10px;
+}
+
+/* ------------------- SECTION-II --------#458FF6------------- */
+.ii {
+  text-align: center;
+}
+
+.section-ii {
+  margin: 2.5rem 0.5rem;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section-ii div {
+  background: white;
+  display: inline-block;
+  margin: 0.5rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  text-align: left;
+  padding: 2.5rem 1.5rem;
+  width: 13em;
+  height: 18em;
+  cursor: pointer;
+}
+
+.section-ii div:hover {
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.section-ii img {
+  height: 80px;
+  margin-bottom: 2rem;
+}
+
+.section-ii h3 {
+  margin-bottom: 0.5rem;
+}
+
+.section-ii p {
+  font-size: 0.75em;
+}
+
+/* ------------------- SECTION-III --------#458FF6------------- */
+
+.section-iii {
+  margin: 3rem 1.2rem;
+  text-align: center;
+}
+
+.section-iii img {
+  width: 100%;
+}
+
+.section-iii h2 {
+  margin: 2rem 0 1rem;
+}
+
+/* ------------------- SECTION-IV --------#458FF6------------- */
+
+.section-iv {
+  margin: 3rem 1.2rem;
+  text-align: center;
+}
+
+.section-iv img {
+  width: 100%;
+}
+
+.section-iv h2 {
+  margin: 2rem 0 1rem;
+}
+
+/* ------------------- SECTION-V -------------------- */
+
+.section-v {
+  color: white;
+  text-align: center;
+  background-image: linear-gradient(to top, #5a98f2, #67c3f3);
+  padding: 2rem 2rem;
+  margin: 3rem 0 3rem;
+}
+
+.section-v .line {
+  background: white;
+  margin: 1.5rem 0 1rem;
+}
+
+.person {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 0 2rem 0;
+  justify-content: center;
+}
+
+.section-v img {
+  border: solid white;
+  border-radius: 50%;
+  object-fit: cover;
+  width: 8rem;
+  height: 8rem;
+  margin-right: 2rem;
+}
+
+.section-v h3 {
+  display: inline-block;
+  color: white;
+  align-self: center;
+}
+
+.section-v p {
+  text-indent: 1em;
+  font-size: 1em;
+  color: white;
+}
+
+/* ------------------- SECTION-VI -------------------- */
+
+.section-vi {
+  margin: 3rem 0;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.section-vi h2 {
+  margin: 2rem 0 1rem;
+}
+
+.vi {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section-vi .card {
+  display: inline-block;
+  background: white;
+  margin: 1rem 0.5rem;
+  padding: 0 1.5rem 1.5rem 0;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  text-align: left;
+  width: 16em;
+}
+
+.section-vi .card:hover {
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.section-vi img {
+  width: 16em;
+  height: 8rem;
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+}
+
+.section-vi h3 {
+  margin: 1rem;
+  font-size: 15px;
+}
+
+.section-vi p {
+  margin: 1rem;
+  font-size: 0.75em;
+}
+
+.section-vi a {
+  margin: 1rem;
+  color: #458ff6;
+}
+
+.section-vi a:hover {
+  color: #233348;
+}
+
+/* ------------------- FOOTER -------------------- */
+
+footer {
+  color: white;
+  background-image: linear-gradient(to top, #5a98f2, #67c3f3);
+  padding: 4rem 2rem;
+  margin: 3rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+
+footer p {
+  color: white;
+}
+
+footer a {
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.trafalgar-footer {
+  display: block;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.t-circle {
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.t-circle p {
+  font-size: 22px;
+  font-weight: 700;
+  color: #458ff6;
+}
+
+.trafalgar-footer h1 {
+  font-size: 20px;
+  color: white;
+  display: inline-flex;
+  margin-left: 0.5rem;
+}
+
+.links-footer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cards-footer {
+  margin: 2rem 1rem 0;
+  text-align: left;
+}
+
+.cards-footer h2 {
+  font-size: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.cards-footer li {
+  list-style: none;
+  line-height: 0.5rem;
+}
+
+.cards-footer a {
+  color: white;
+  display: block;
+}
+
+.cards-footer a:hover {
+  cursor: pointer;
+  color: #233348;
+}
+
+/* ------------------------------------------------ 
+---------------------- > 730px --------------------
+--------------------------------------------------- */
+
+@media screen and (min-width: 730px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 1.1em;
+  }
+
+  /* -------------------- HEADER -------------------- */
+
+  .circle {
+    height: 41px;
+    width: 41px;
+  }
+
+  .circle p {
+    font-size: 26px;
+  }
+
+  .navbar h1 {
+    font-size: 24px;
+  }
+
+  /* ------------------- SECTION-I ------------------- */
+
+  .section-i {
+    margin: 80px 4rem 4rem 4rem;
+    text-align: left;
+  }
+  /* ------------------- SERVICES ------------------- */
+
+  .services {
+    margin: 4rem;
+  }
+  /* ------------------- SECTION-II ------------------- */
+
+  .section-ii {
+    margin: 2.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 15em);
+    justify-items: center;
+    text-align: center;
+  }
+
+  .section-ii div {
+    background: white;
+    display: inline-block;
+    margin: 1rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    text-align: left;
+    padding: 2.5rem 1.5rem;
+    width: 14em;
+    height: 18em;
+    cursor: pointer;
+  }
+
+  .section-ii div:hover {
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .section-ii img {
+    height: 80px;
+    margin-bottom: 2rem;
+  }
+
+  .section-ii h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .section-ii p {
+    font-size: 0.75em;
+  }
+
+  /* ------------------- SECTION-III ------------------- */
+
+  .section-iii {
+    margin: 3rem 4rem 4rem 4rem;
+    text-align: left;
+  }
+
+  /* ------------------- SECTION-IV ------------------- */
+
+  .section-iv {
+    margin: 4rem;
+    text-align: left;
+  }
+
+  /* ------------------- SECTION-V ------------------- */
+
+  .section-v {
+    padding: 2rem 1rem;
+  }
+
+  .azul-v {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    margin: auto;
+  }
+  s .person {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: left;
+  }
+
+  .person img {
+    margin: 0 1rem 0 0;
+  }
+
+  .azul-v p {
+    align-self: center;
+    text-align: left;
+  }
+
+  /* ------------------- FOOTER ------------------- */
+
+  .t-circle {
+    height: 41px;
+    width: 41px;
+  }
+
+  .t-circle p {
+    font-size: 26px;
+    font-weight: 700;
+    color: #458ff6;
+  }
+
+  .trafalgar-footer h1 {
+    font-size: 24px;
+  }
+}
+/* ------------------------------------------------ 
+---------------------- > 950px --------------------
+--------------------------------------------------- */
+
+@media screen and (min-width: 1000px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  /* ------------------- SECTION-I --------#458FF6------------- */
+
+  .section-i {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-areas: "text-i image-i";
+    align-items: center;
+    justify-items: center;
+  }
+
+  .i-esquerda {
+    grid-area: text-i;
+    width: 28rem;
+  }
+
+  .section-i img {
+    grid-area: image-i;
+    margin: 0 12rem;
+  }
+
+  /* ------------------- SECTION-III --------#458FF6------------- */
+
+  .section-iii {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    align-items: center;
+    justify-items: center;
+  }
+
+  .iii-direita {
+    width: 22rem;
+    margin-left: 4rem;
+  }
+
+  /* ------------------- SECTION-IV --------#458FF6------------- */
+
+  .section-iv {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-areas: "text-iv image-iv";
+    align-items: center;
+    justify-items: center;
+  }
+
+  .iv-esquerda {
+    grid-area: text-iv;
+    width: 22rem;
+  }
+
+  .section-iv img {
+    grid-area: image-iv;
+  }
+
+  /* ------------------- SECTION-V --------#458FF6------------- */
+
+  .section-v {
+    margin: 3rem auto;
+    border-radius: 20px;
+    width: 55rem;
+  }
+
+  /* ------------------- FOOTER ------------------- */
+
+  footer {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    margin: 1rem 0 0;
+    padding: 4rem 2rem;
+    justify-items: center;
+    text-align: left;
+  }
+
+  .cards-footer {
+    margin: 0 1rem;
+  }
+}
