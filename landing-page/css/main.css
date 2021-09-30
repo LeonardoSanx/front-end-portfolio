@@ -3,11 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Mulish", sans-serif;
-}
-
-a {
-  color: #1f1534;
-  text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -25,6 +21,11 @@ h3 {
   font-weight: 700;
 }
 
+a {
+  color: #1f1534;
+  text-decoration: none;
+}
+
 p {
   font-weight: 300;
   font-size: 1em;
@@ -33,7 +34,7 @@ p {
 }
 
 button:hover {
-  transition-duration: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .clean-button {
@@ -48,36 +49,55 @@ button:hover {
   border: solid #458ff6;
   border-width: 1.4px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .clean-button:hover {
   background: #458ff6;
   color: white;
+  transition: all 0.3s ease;
 }
 
-/* ------------------- HEADER -------------------- */
+/* ------------------- HEADER ----------------- */
 
 .navbar {
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
   top: 0;
   background: white;
-  position: fixed;
+  z-index: 999;
+}
+
+.navbar_container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  z-index: 1;
+  margin: 0;
+  background: white;
+  padding: 0;
+}
+
+.logo {
   display: flex;
   align-items: center;
-  width: 100%;
-  height: 80px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  margin-left: 1.5rem;
 }
 
 .circle {
-  height: 38px;
-  width: 38px;
-  border-radius: 50%;
-  margin: 0 0.5rem 0 1.5rem;
-  background: #458ff6;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  height: 38px;
+  width: 38px;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  background: #458ff6;
 }
 
 .circle p {
@@ -86,34 +106,94 @@ button:hover {
   color: white;
 }
 
-.navbar h1 {
+.logo h1 {
   color: #233348;
   font-size: 20px;
 }
 
-nav {
-  padding: 0 1.2rem;
-  flex: 1;
-  text-align: right;
-}
-
-nav ul li {
-  font-weight: 400;
-  font-size: 18px;
-  display: inline-block;
+.navbar_menu {
+  display: grid;
+  opacity: 0;
+  grid-template-columns: auto;
+  position: absolute;
+  top: -1000%;
+  margin: 0;
+  width: 100%;
+  align-items: center;
+  background: white;
   list-style: none;
-  margin: 0 0.4rem;
+  transition: all 1s ease;
+  z-index: -1;
 }
 
-nav ul li a:hover {
+.navbar_menu.active {
+  display: grid;
+  opacity: 1;
+  top: 100%;
+  height: 60vh;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.navbar_list {
+  height: 80px;
+  width: 100%;
+}
+
+.highlight {
+  border-bottom: 4px solid #458ff6;
+}
+
+.navbar_links {
+  padding: 2rem;
+  display: table;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  background: white;
+}
+
+.navbar_links:hover {
   color: #458ff6;
+  transition: all 0.3s ease;
+}
+
+#mobile-menu {
+  cursor: pointer;
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  transform: translate(5%, 20%);
+}
+
+.navbar_toggle .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background: black;
+}
+
+#mobile-menu.is-active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+#mobile-menu.is-active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+#mobile-menu.is-active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 /* ------------------- SECTION-I --------#458FF6------------- */
 
 .section-i {
-  margin: 80px 1.2rem 0 1.2rem;
+  margin: 0.5rem 1.2rem;
   text-align: center;
+  padding-top: 5rem;
 }
 
 .section-i img {
@@ -147,6 +227,7 @@ nav ul li a:hover {
 .services {
   margin: 2.5rem;
   text-align: center;
+  padding-top: 5rem;
 }
 
 .services h2 {
@@ -225,6 +306,7 @@ nav ul li a:hover {
 .section-iv {
   margin: 3rem 1.2rem;
   text-align: center;
+  padding-top: 5rem;
 }
 
 .section-iv img {
@@ -236,6 +318,9 @@ nav ul li a:hover {
 }
 
 /* ------------------- SECTION-V -------------------- */
+#testimonials {
+  padding-top: 5rem;
+}
 
 .section-v {
   color: white;
@@ -263,7 +348,7 @@ nav ul li a:hover {
   object-fit: cover;
   width: 8rem;
   height: 8rem;
-  margin-right: 2rem;
+  margin: 1rem;
 }
 
 .section-v h3 {
@@ -282,7 +367,7 @@ nav ul li a:hover {
 
 .section-vi {
   margin: 3rem 0;
-  padding: 2rem 0;
+  padding: 4rem 0 2rem 0;
   text-align: center;
 }
 
@@ -339,7 +424,7 @@ nav ul li a:hover {
 
 /* ------------------- FOOTER -------------------- */
 
-footer {
+.footer-container {
   color: white;
   background-image: linear-gradient(to top, #5a98f2, #67c3f3);
   padding: 4rem 2rem;
@@ -350,11 +435,11 @@ footer {
   width: 100%;
 }
 
-footer p {
+.footer-container p {
   color: white;
 }
 
-footer a {
+.footer-container a {
   display: inline-block;
   margin-bottom: 2rem;
 }
@@ -439,25 +524,10 @@ footer a {
     font-size: 1.1em;
   }
 
-  /* -------------------- HEADER -------------------- */
-
-  .circle {
-    height: 41px;
-    width: 41px;
-  }
-
-  .circle p {
-    font-size: 26px;
-  }
-
-  .navbar h1 {
-    font-size: 24px;
-  }
-
   /* ------------------- SECTION-I ------------------- */
 
   .section-i {
-    margin: 80px 4rem 4rem 4rem;
+    margin: 0.5rem 4rem 4rem 4rem;
     text-align: left;
   }
   /* ------------------- SERVICES ------------------- */
@@ -563,8 +633,9 @@ footer a {
     font-size: 24px;
   }
 }
+
 /* ------------------------------------------------ 
----------------------- > 950px --------------------
+---------------------- > 1000px --------------------
 --------------------------------------------------- */
 
 @media screen and (min-width: 1000px) {
@@ -578,6 +649,84 @@ footer a {
 
   h3 {
     font-size: 24px;
+  }
+
+  /* ------------------- HEADER------------- */
+
+  #mobile-menu {
+    display: none;
+  }
+
+  .circle {
+    height: 41px;
+    width: 41px;
+  }
+
+  .circle p {
+    font-size: 26px;
+  }
+
+  .navbar_container h1 {
+    font-size: 24px;
+  }
+
+  .navbar_container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    z-index: 1;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    background: white;
+  }
+
+  .navbar_menu {
+    display: flex;
+    opacity: 1;
+    list-style: none;
+    position: initial;
+    margin: initial;
+    align-items: center;
+    justify-content: center;
+    width: initial;
+    height: initial;
+    font-size: 1em;
+    z-index: 1;
+  }
+
+  .navbar_menu.active {
+    display: flex;
+    opacity: 1;
+    list-style: none;
+    position: initial;
+    margin: initial;
+    align-items: center;
+    justify-content: center;
+    width: initial;
+    height: initial;
+    font-size: 1em;
+    z-index: 1;
+  }
+
+  .navbar_list {
+    height: 80px;
+    background: white;
+  }
+
+  .navbar_links {
+    display: flex;
+    height: 100%;
+    background: white;
+    justify-content: center;
+    padding: 0;
+    width: 125px;
+    transition: all 0.3s ease;
+  }
+
+  .navbar_links:hover {
+    color: #458ff6;
+    transition: all 0.3s ease;
   }
 
   /* ------------------- SECTION-I --------#458FF6------------- */
@@ -643,7 +792,7 @@ footer a {
 
   /* ------------------- FOOTER ------------------- */
 
-  footer {
+  .footer-container {
     display: grid;
     grid-template-columns: repeat(2, 50%);
     margin: 1rem 0 0;

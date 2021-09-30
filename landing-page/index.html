@@ -14,27 +14,51 @@
   </head>
   <body>
     <div class="container">
-      <div class="navbar">
-        <a href="./index.html">
-          <div class="circle">
-            <p>T</p>
+      <nav class="navbar">
+        <div class="navbar_container">
+          <div class="logo">
+            <a href="./index.html">
+              <div class="circle">
+                <p>T</p>
+              </div>
+            </a>
+            <a href="./index.html">
+              <h1>Trafalgar</h1>
+            </a>
           </div>
-        </a>
-        <a href="./index.html">
-          <h1>Trafalgar</h1>
-        </a>
-        <nav>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Find a doctor</a></li>
-            <li><a href="#">Apps</a></li>
-            <li><a href="#">Testimonials</a></li>
-            <li><a href="#">About us</a></li>
+          <div class="navbar_toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul class="navbar_menu">
+            <li class="navbar_list">
+              <a href="#home" class="navbar_links" id="home-link">Home</a>
+            </li>
+            <li class="navbar_list">
+              <a href="#services" class="navbar_links" id="services-link"
+                >Services</a
+              >
+            </li>
+            <li class="navbar_list">
+              <a href="#apps" class="navbar_links" id="apps-link">Apps</a>
+            </li>
+            <li class="navbar_list">
+              <a
+                href="#testimonials"
+                class="navbar_links"
+                id="testimonials-link"
+                >Testimonials</a
+              >
+            </li>
+            <li class="navbar_list">
+              <a href="#about" class="navbar_links" id="about-link">About us</a>
+            </li>
           </ul>
-        </nav>
-      </div>
+        </div>
+      </nav>
 
-      <section class="section-i">
+      <section class="section-i" id="home">
         <img src="./images/Illustration 1.PNG" alt="" />
         <div class="i-esquerda">
           <h1>Virtual healthcare for you</h1>
@@ -46,7 +70,7 @@
         </div>
       </section>
 
-      <div class="services">
+      <div class="services" id="services">
         <h2>Our services</h2>
         <div class="line"></div>
         <p>
@@ -121,7 +145,7 @@
         </div>
       </section>
 
-      <section class="section-iv">
+      <section class="section-iv" id="apps">
         <img src="./images/Illustration 3.PNG" alt="" />
         <div class="iv-esquerda">
           <h2>Download our mobile apps</h2>
@@ -135,24 +159,26 @@
         </div>
       </section>
 
-      <section class="section-v">
-        <h2>What our customers are saying</h2>
-        <div class="line"></div>
-        <div class="azul-v">
-          <div class="person">
-            <img src="./images/pessoa1.png" alt="" />
-            <h3>Edward Newgate</h3>
+      <section id="testimonials">
+        <div class="section-v">
+          <h2>What our customers are saying</h2>
+          <div class="line"></div>
+          <div class="azul-v">
+            <div class="person">
+              <img src="./images/pessoa1.png" alt="" />
+              <h3>Edward Newgate</h3>
+            </div>
+            <p>
+              "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil
+              alias ipsam assumenda tempora beatae. Quod consequuntur rerum sit
+              dicta neque cumque ipsa, odit provident magnam illum alias error,
+              ullam aspernatur"
+            </p>
           </div>
-          <p>
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil
-            alias ipsam assumenda tempora beatae. Quod consequuntur rerum sit
-            dicta neque cumque ipsa, odit provident magnam illum alias error,
-            ullam aspernatur"
-          </p>
         </div>
       </section>
 
-      <section class="section-vi">
+      <section class="section-vi" id="about">
         <h2>Check our latest articles</h2>
         <div class="line"></div>
         <div class="vi">
@@ -188,50 +214,53 @@
       </section>
 
       <footer>
-        <div class="trafalgar-footer">
-          <a href="./index.html">
-            <div class="t-circle">
-              <p>T</p>
+        <div class="footer-container">
+          <div class="trafalgar-footer">
+            <a href="./index.html">
+              <div class="t-circle">
+                <p>T</p>
+              </div>
+            </a>
+            <a href="./index.html">
+              <h1>Trafalgar</h1>
+            </a>
+            <p>
+              Trafalfar provides progressive, and affordable healthcare,
+              accessible on mobile and online for everyone.
+            </p>
+          </div>
+          <div class="links-footer">
+            <div class="cards-footer">
+              <h2>Company</h2>
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Find a doctor</a></li>
+                <li><a href="#">Apps</a></li>
+              </ul>
             </div>
-          </a>
-          <a href="./index.html">
-            <h1>Trafalgar</h1>
-          </a>
-          <p>
-            Trafalfar provides progressive, and affordable healthcare,
-            accessible on mobile and online for everyone.
-          </p>
-        </div>
-        <div class="links-footer">
-          <div class="cards-footer">
-            <h2>Company</h2>
-            <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Testimonials</a></li>
-              <li><a href="#">Find a doctor</a></li>
-              <li><a href="#">Apps</a></li>
-            </ul>
-          </div>
-          <div class="cards-footer">
-            <h2>Region</h2>
-            <ul>
-              <li><a href="#">Indonesia</a></li>
-              <li><a href="#">Singapure</a></li>
-              <li><a href="#">Hongkong</a></li>
-              <li><a href="#">Canada</a></li>
-            </ul>
-          </div>
-          <div class="cards-footer">
-            <h2>Help</h2>
-            <ul>
-              <li><a href="#">Help center</a></li>
-              <li><a href="#">Contract support</a></li>
-              <li><a href="#">Instructions</a></li>
-              <li><a href="#">How it works</a></li>
-            </ul>
+            <div class="cards-footer">
+              <h2>Region</h2>
+              <ul>
+                <li><a href="#">Indonesia</a></li>
+                <li><a href="#">Singapure</a></li>
+                <li><a href="#">Hongkong</a></li>
+                <li><a href="#">Canada</a></li>
+              </ul>
+            </div>
+            <div class="cards-footer">
+              <h2>Help</h2>
+              <ul>
+                <li><a href="#">Help center</a></li>
+                <li><a href="#">Contract support</a></li>
+                <li><a href="#">Instructions</a></li>
+                <li><a href="#">How it works</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </footer>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
