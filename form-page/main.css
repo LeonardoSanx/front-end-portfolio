@@ -1,16 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
+:root {
+  --roxo: #820ad1;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-/* #5f249f */
-
 body,
 input {
   font-family: "Poppins", sans-serif;
+  font-weight: 600;
 }
 
 .container {
@@ -27,12 +30,32 @@ input {
   width: 2000px;
   height: 2000px;
   border-radius: 50%;
-  background: #5f249f;
+  background: var(--roxo);
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
   z-index: 6;
   transition: 1s ease-in-out;
+}
+
+.logo {
+  position: absolute;
+  transform: translate(50%, 50%);
+  height: 40px;
+  z-index: 10;
+}
+
+.logo-roxo {
+  opacity: 0;
+  position: absolute;
+  transform: translate(50%, 50%);
+  height: 40px;
+  z-index: 11;
+  transition: 0.2s 0.4s ease-in-out;
+}
+
+.logo-roxo.sign-up-mode {
+  opacity: 1;
 }
 
 .forms-container {
@@ -60,7 +83,7 @@ form {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 5rem;
+  padding: 0 3rem;
   overflow: hidden;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
@@ -83,57 +106,129 @@ form.sign-up-form {
 }
 
 .input-field {
-  max-width: 380px;
-  width: 100%;
-  height: 55px;
-  background-color: white;
-  margin: 20px 0;
-  border-radius: 55px;
+  position: relative;
+  max-width: 360px;
   display: grid;
   grid-template-columns: 10% 90%;
-  padding: 0 0.4rem;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #d9d9d9;
+  background-color: white;
+  margin: 1rem 0;
+  padding: 0.4rem;
+}
+
+.input-field::after,
+.input-field::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: var(--roxo);
+  transition: 0.3s;
+}
+
+.input-field::after {
+  right: 50%;
+}
+
+.input-field::before {
+  left: 50%;
+}
+
+.input-field.focus i {
+  color: var(--roxo);
+}
+
+.input-field.focus div h5 {
+  top: -5px;
+  font-size: 0.8rem;
+}
+
+.input-field.focus::after,
+.input-field.focus::before {
+  width: 50%;
+}
+
+.input-field > div {
+  position: relative;
+  height: 50px;
+}
+
+.input-field h5 {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
 }
 
 .input-field i {
   text-align: center;
-  line-height: 55px;
-  color: #acacac;
+  line-height: 50px;
+  color: #d9d9d9;
   font-size: 1.1rem;
 }
 
-.input-field input {
+.input-field .input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
   background: none;
   border: none;
   outline: none;
-  line-height: 1;
-  font-weight: 600;
+  padding: 0.5rem 0.7rem;
   font-size: 1.1rem;
-  color: #333;
+  color: #555;
 }
 
-.input-field input::placeholder {
-  color: #aaa;
-  font-weight: 500;
+.forgot {
+  max-width: 360px;
+  width: 100%;
+  display: block;
+  text-align: right;
+  text-decoration: none;
+  color: #999;
+  font-size: 0.9rem;
+  transition: 0.3s;
+  margin: -10px 0 15px 0;
+}
+
+.forgot:hover {
+  color: var(--roxo);
 }
 
 .btn {
   width: 150px;
   height: 50px;
-  border: 2px solid #5f249f;
+  border: 2px solid var(--roxo);
   outline: none;
   border-radius: 50px;
   cursor: pointer;
   background-color: white;
-  color: #5f249f;
-  font-weight: 600;
+  color: var(--roxo);
   margin: 10px 0;
   transition: 0.2s;
 }
 
 .btn:hover {
-  background-color: #5f249f;
+  background-color: var(--roxo);
   color: white;
 }
+
+/* --------- BANCO NAO TENHA REDE SOCIAL ---------- */
 
 .social-text {
   padding: 0.7rem 0;
@@ -160,10 +255,12 @@ form.sign-up-form {
 }
 
 .social-icon:hover {
-  color: #5f249f;
-  border-color: #5f249f;
+  color: var(--roxo);
+  border-color: var(--roxo);
   border-width: 2px;
 }
+
+/* ---------------------------------------- */
 
 .panels-container {
   position: absolute;
@@ -173,6 +270,11 @@ form.sign-up-form {
   left: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+
+.logo {
+  display: flex;
+  top: 0;
 }
 
 .panel {
@@ -203,6 +305,7 @@ form.sign-up-form {
   font-weight: 600;
   line-height: 1;
   font-size: 1.5rem;
+  padding: 1.5rem 0;
 }
 
 .panel p {
@@ -220,7 +323,7 @@ form.sign-up-form {
 }
 
 .btn.transparent:hover {
-  background: #501e85;
+  background: #5f249f;
 }
 
 .image {
@@ -282,7 +385,7 @@ form.sign-up-form {
     width: 1500px;
     height: 1500px;
     left: 30%;
-    bottom: 68%;
+    bottom: 65%;
     transform: translateX(-50%);
     right: initial;
     top: initial;
@@ -291,7 +394,7 @@ form.sign-up-form {
   .signin-signup {
     width: 100%;
     left: 50%;
-    top: 95%;
+    top: 90%;
     transform: translate(-50%, -100%);
     transition: 0.8s 0.4s ease-in-out;
   }
@@ -352,7 +455,7 @@ form.sign-up-form {
 
   .container.sign-up-mode::before {
     transform: translate(-50%, 100%);
-    bottom: 32%;
+    bottom: 35%;
     right: initial;
   }
 
@@ -362,13 +465,25 @@ form.sign-up-form {
   }
 
   .container.sign-up-mode .signin-signup {
-    top: 5%;
+    top: 10%;
     transform: translate(-50%, 0);
     left: 50%;
   }
 }
 
 @media (max-width: 570px) {
+  .logo {
+    opacity: 0;
+  }
+
+  .logo-roxo {
+    opacity: 0;
+  }
+
+  .logo-roxo.sign-up-mode {
+    opacity: 0;
+  }
+
   .container {
     min-height: 750px;
     height: 100vh;
@@ -399,11 +514,20 @@ form.sign-up-form {
   .input-field {
     height: 40px;
     margin: 15px 0;
+    padding: 0;
+  }
+
+  .input-field > div {
+    height: 40px;
   }
 
   .input-field i {
     line-height: 40px;
     font-size: 1rem;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
   }
 
   .input-field input {
