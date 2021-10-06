@@ -26,11 +26,16 @@
 
             <div class="input-field">
               <div class="i">
-                <i class="fas fa-user"></i>
+                <i class="fas fa-id-card"></i>
               </div>
               <div>
-                <h5>CPF</h5>
-                <input type="text" class="input" />
+                <h5 id="cpf">CPF</h5>
+                <input
+                  type="text"
+                  class="input"
+                  name="cpf"
+                  onkeydown="javascript: fMasc( this, CPF );"
+                />
               </div>
             </div>
 
@@ -39,12 +44,17 @@
                 <i class="fas fa-lock"></i>
               </div>
               <div>
-                <h5>Senha</h5>
-                <input type="password" class="input" />
+                <h5 id="senha">Senha</h5>
+                <input
+                  type="password"
+                  class="input"
+                  name="senha"
+                  onkeydown="javascript: fMasc( this, Senha );"
+                />
               </div>
             </div>
             <a href="#" class="forgot">Esqueci minha senha</a>
-            <input type="submit" value="Continuar" class="btn" />
+            <input type="submit" value="Continuar" class="btn" id="btn-in" />
 
             <!----------- BANCO NAO TENHA REDE SOCIAL ------------>
 
@@ -70,21 +80,31 @@
 
             <div class="input-field">
               <div class="i">
-                <i class="fas fa-user"></i>
+                <i class="fas fa-id-card"></i>
               </div>
               <div>
-                <h5>CPF</h5>
-                <input type="text" class="input" />
+                <h5 id="cpf-up">CPF</h5>
+                <input
+                  type="text"
+                  class="input"
+                  name="cpf-up"
+                  onkeydown="javascript: fMasc( this, CPF );"
+                />
               </div>
             </div>
 
             <div class="input-field">
               <div class="i">
-                <i class="fas fa-lock"></i>
+                <i class="fas fa-user"></i>
               </div>
               <div>
-                <h5>Nome Completo</h5>
-                <input type="password" class="input" />
+                <h5 id="nome">Nome Completo</h5>
+                <input
+                  type="text"
+                  class="input"
+                  name="nome"
+                  onkeydown="javascript: fMasc( this, Nome );"
+                />
               </div>
             </div>
 
@@ -93,12 +113,12 @@
                 <i class="fas fa-envelope"></i>
               </div>
               <div>
-                <h5>E-mail</h5>
-                <input type="text" class="input" />
+                <h5 id="email">E-mail</h5>
+                <input type="text" class="input" name="email" />
               </div>
             </div>
 
-            <input type="submit" value="Enviar" class="btn" />
+            <input type="submit" value="Enviar" class="btn" id="btn-up" />
 
             <!----------- BANCO NAO TENHA REDE SOCIAL ------------>
 

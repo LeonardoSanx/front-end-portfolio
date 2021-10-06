@@ -166,6 +166,10 @@ form.sign-up-form {
   transition: 0.3s;
 }
 
+.input-field .invalid {
+  color: #f00e0e;
+}
+
 .i {
   display: flex;
   justify-content: center;
