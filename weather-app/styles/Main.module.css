@@ -1,0 +1,81 @@
+.container {
+  position: relative;
+  margin: 3rem 0 4rem 5rem;
+  color: white;
+}
+
+.temp {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.temp h1 {
+  font-size: 7rem;
+}
+.name {
+  margin: 2rem;
+}
+
+.name h2 {
+  font-size: 3rem;
+}
+
+@media (max-width: 940px) {
+  .container {
+    position: relative;
+    padding: 0;
+    margin: 12vh 0 0 5rem;
+    color: white;
+    height: 78vh;
+    width: 100%;
+  }
+
+  .power {
+    font-size: 0.8rem;
+  }
+
+  .temp h1 {
+    font-size: 6.5rem;
+  }
+
+  .name h2 {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 12vh 0 0 2rem;
+  }
+
+  .temp h1 {
+    font-size: 6.2rem;
+  }
+
+  .name h2 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    margin: 12vh 0 0 1rem;
+  }
+  .temp h1 {
+    font-size: 5.5rem;
+  }
+  .name {
+    margin: 1rem 2rem;
+  }
+
+  .name h2 {
+    font-size: 1.5rem;
+  }
+
+  .name p {
+    font-size: 0.8rem;
+  }
+}
