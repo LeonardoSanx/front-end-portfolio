@@ -157,7 +157,7 @@ export default function Home({ we, api }) {
 }
 
 export const getStaticProps = async () => {
-  request("dotenv").config();
+  require("dotenv").config();
   const api = await process.env.API_KEY;
   const res = await fetch(
     `http://api.weatherapi.com/v1/forecast.json?key=${api}&q=rio de janeiro&days=1`
