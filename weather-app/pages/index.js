@@ -8,7 +8,7 @@ import Background from "../components/Background";
 import React from "react";
 import { useState, useEffect } from "react";
 
-export default function Home({ we }) {
+export default function Home({ we, api }) {
   const [toggle, setToggle] = useState(false);
   const [loc, setLoc] = useState("");
   const [weather, setWeather] = useState(we);
@@ -81,7 +81,7 @@ export default function Home({ we }) {
       return;
     } else {
       const res = await fetch(
-        `http://api.weatherapi.com/v1/forecast.json?key=99e322cb1fa24b9c9b4233259210610&q=${loc}&days=1`
+        `http://api.weatherapi.com/v1/forecast.json?key=${api}&q=${loc}&days=1`
       )
         .then((response) => response.json())
         .then((response) => setWeather(response));
@@ -157,8 +157,10 @@ export default function Home({ we }) {
 }
 
 export const getStaticProps = async () => {
+  request("dotenv").config();
+  const api = await process.env.API_KEY;
   const res = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=99e322cb1fa24b9c9b4233259210610&q=rio de janeiro&days=1`
+    `http://api.weatherapi.com/v1/forecast.json?key=${api}&q=rio de janeiro&days=1`
   );
 
   const we = await res.json();
@@ -166,6 +168,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       we,
+      api,
     },
   };
 };
