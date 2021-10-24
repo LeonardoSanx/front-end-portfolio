@@ -81,7 +81,7 @@ export default function Home({ we, api }) {
       return;
     } else {
       const res = await fetch(
-        `http://api.weatherapi.com/v1/forecast.json?key=${api}&q=${loc}&days=1`
+        `https://api.weatherapi.com/v1/forecast.json?key=${api}&q=${loc}&days=1`
       )
         .then((response) => response.json())
         .then((response) => setWeather(response));
@@ -158,9 +158,9 @@ export default function Home({ we, api }) {
 
 export const getStaticProps = async () => {
   require("dotenv").config();
-  const api = await process.env.API_KEY;
+  const api = process.env.API_KEY;
   const res = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=${api}&q=rio de janeiro&days=1`
+    `https://api.weatherapi.com/v1/forecast.json?key=${api}&q=rio de janeiro&days=1`
   );
 
   const we = await res.json();
