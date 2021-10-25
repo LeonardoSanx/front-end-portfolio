@@ -37,6 +37,9 @@
     height: 50vh;
     width: 100%;
   }
+  .name {
+    margin: 1rem;
+  }
 
   .power {
     font-size: 0.8rem;
@@ -50,11 +53,11 @@
   }
 
   .temp h1 {
-    font-size: 6.5rem;
+    font-size: 6rem;
   }
 
   .name h2 {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
   }
 }
 
