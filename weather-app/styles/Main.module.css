@@ -32,7 +32,7 @@
   .container {
     position: fixed;
     padding: 0;
-    margin: 12vh 0 0 5rem;
+    margin: 12vh 0 0 2rem;
     color: white;
     height: 50vh;
     width: 100%;
@@ -63,7 +63,7 @@
 
 @media (max-width: 600px) {
   .container {
-    margin: 10vh 0 0 2rem;
+    margin: 10vh 0 0 1rem;
   }
 
   .temp h1 {
@@ -76,9 +76,6 @@
 }
 
 @media (max-width: 320px) {
-  .container {
-    margin: 10vh 0 0 1rem;
-  }
   .temp h1 {
     font-size: 4rem;
   }
