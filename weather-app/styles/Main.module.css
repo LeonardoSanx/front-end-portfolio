@@ -2,14 +2,19 @@
   position: relative;
   margin: 3rem 0 4rem 5rem;
   color: white;
+  padding: 0;
 }
 
 .temp {
   position: absolute;
-  bottom: 0;
+  top: 0;
   display: flex;
   align-items: center;
   width: 100%;
+}
+.power {
+  position: absolute;
+  bottom: 0;
 }
 
 .temp h1 {
@@ -25,16 +30,23 @@
 
 @media (max-width: 940px) {
   .container {
-    position: relative;
+    position: fixed;
     padding: 0;
     margin: 12vh 0 0 5rem;
     color: white;
-    height: 78vh;
+    height: 50vh;
     width: 100%;
   }
 
   .power {
     font-size: 0.8rem;
+  }
+
+  .temp {
+    bottom: initial;
+    display: flex;
+    align-items: center;
+    width: 100%;
   }
 
   .temp h1 {
@@ -48,7 +60,7 @@
 
 @media (max-width: 600px) {
   .container {
-    margin: 12vh 0 0 2rem;
+    margin: 10vh 0 0 2rem;
   }
 
   .temp h1 {
@@ -62,7 +74,7 @@
 
 @media (max-width: 320px) {
   .container {
-    margin: 12vh 0 0 1rem;
+    margin: 10vh 0 0 1rem;
   }
   .temp h1 {
     font-size: 5.5rem;
