@@ -17,14 +17,24 @@
   color: rgb(170, 170, 170);
 }
 
+.search:-webkit-autofill,
+.search:-webkit-autofill:hover,
+.search:-webkit-autofill:focus,
+.search:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px rgb(53, 53, 53) inset !important;
+  -webkit-text-fill-color: rgb(170, 170, 170);
+}
+
 .search::placeholder {
   color: rgb(170, 170, 170);
   background: none;
+  accent-color: none;
 }
 
 .search:focus {
   outline-width: 0;
   background: none;
+  accent-color: none;
 }
 
 .submit {

@@ -6,7 +6,11 @@ const Main = ({ weather }) => {
       <div className={mainStyles.power}>
         <p>
           Powered by:
-          <a href="https://www.weatherapi.com/" title="Free Weather API">
+          <a
+            href="https://www.weatherapi.com/"
+            title="Free Weather API"
+            target="_blank"
+          >
             WeatherAPI.com
           </a>
         </p>
