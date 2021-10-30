@@ -1,0 +1,56 @@
+.a {
+  margin-bottom: 5rem;
+}
+
+.container {
+  position: relative;
+  width: 500px;
+}
+
+.title {
+  margin: 0.5rem 1rem;
+  color: #768ead;
+}
+
+.videoContainer {
+  background-color: white;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 2px rgba(218, 217, 217, 0.2);
+}
+
+.videoContainer:hover {
+  box-shadow: 5px 5px 10px 2px rgba(255, 255, 255, 0.3);
+}
+
+.video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.imageContainer {
+  position: absolute;
+  top: -12px;
+  left: 320px;
+}
+
+.img {
+  width: 100%;
+  transform: scaleX(-1);
+  width: 150px;
+}
+
+.videoPhoneContainer {
+  position: absolute;
+  top: -12px;
+  left: 326px;
+  width: 170px;
+  perspective: 1400px;
+}
+
+.phone_video {
+  width: 100%;
+  width: 125px;
+  transform: rotateY(44deg) rotateX(10deg) scaleY(0.92);
+  border-radius: 20px;
+}
