@@ -2,7 +2,7 @@ export const projects = [
   {
     id: "1",
     title: "Lading Page",
-    link: "https://landing-page-omega-seven.vercel.app/",
+    link: "https://trafalgar-landing-page.vercel.app/",
     card_video: "landingPage",
     phone_video: "landingPage_phone",
     technologies: ["HTML", "CSS"],
@@ -12,7 +12,7 @@ export const projects = [
   {
     id: "2",
     title: "Nubank Login Page",
-    link: "https://login-page-tan.vercel.app/",
+    link: "https://nubank-login-page.vercel.app/",
     card_video: "loginPage",
     phone_video: "loginPage_phone",
     technologies: ["HTML", "CSS", "JavaScript"],
@@ -21,7 +21,7 @@ export const projects = [
   {
     id: "3",
     title: "Weather website",
-    link: "https://weather-pi-lovat.vercel.app/",
+    link: "https://weather-website-five.vercel.app/",
     card_video: "weatherWebsite",
     phone_video: "weatherWebsite_phone",
     technologies: ["React", "Netx", "API"],

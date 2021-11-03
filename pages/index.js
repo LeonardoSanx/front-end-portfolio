@@ -6,6 +6,7 @@ import React from "react";
 import { Section } from "../components/styledComponents";
 import Project from "../components/projects";
 import HomeSection from "../components/homeSection";
+import AboutSection from "../components/aboutSection";
 
 export default function Home() {
   return (
@@ -17,11 +18,10 @@ export default function Home() {
       <Header />
       <div className={homeStyles.container}>
         <Section id="home">
-          {/* <div className={homeStyles.homeContainer}></div> */}
           <HomeSection />
         </Section>
         <Section id="about">
-          <div className={homeStyles.aboutContainer}></div>
+          <AboutSection />
         </Section>
 
         <Section id="projects">
