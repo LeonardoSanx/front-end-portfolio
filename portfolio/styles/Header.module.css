@@ -21,7 +21,7 @@
   z-index: 3;
   display: flex;
   width: 100%;
-  padding: 0 5rem;
+  padding: 0 10%;
   justify-content: right;
 }
 
@@ -65,12 +65,21 @@
 
 @media (max-width: 900px) {
   .navbar {
-    padding: 0 3rem;
+    padding: 0 8%;
   }
 }
 
 @media (max-width: 650px) {
   .navbar {
-    padding: 0 1.5rem;
+    padding: 5%;
+  }
+
+  .navigation {
+    font-size: 0.8rem;
+  }
+
+  .nav {
+    background-color: tomato;
+    padding-left: 0.5rem;
   }
 }
