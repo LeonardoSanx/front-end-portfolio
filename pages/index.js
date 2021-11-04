@@ -4,9 +4,9 @@ import homeStyles from "../styles/Home.module.css";
 import Header from "../components/header";
 import React from "react";
 import { Section } from "../components/styledComponents";
-import Project from "../components/projects";
+import ProjectsSection from "../components/projectsSection";
 import HomeSection from "../components/homeSection";
-import AboutSection from "../components/aboutSection";
+import AboutSection from "../components/AboutSection";
 
 export default function Home() {
   return (
@@ -26,7 +26,7 @@ export default function Home() {
 
         <Section id="projects">
           <div className={homeStyles.projectsContainer}>
-            <Project />
+            <ProjectsSection />
           </div>
         </Section>
 

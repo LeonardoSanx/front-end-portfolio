@@ -2,8 +2,12 @@
   width: 5rem;
   height: 2px;
   border-radius: 2px;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
   background: linear-gradient(to right, white 0%, rgb(70, 70, 70) 100%);
+}
+
+.container {
+  margin-bottom: 8rem;
 }
 
 .container h1 {
@@ -12,7 +16,7 @@
 
 .container h2 {
   color: #a5b3c5;
-  margin-bottom: 0.6rem;
+  font-size: 2rem;
 }
 
 .container p {
@@ -27,6 +31,10 @@
   position: relative;
   height: 20rem;
   margin-bottom: 8rem;
+}
+
+.name h2 {
+  margin-bottom: 0.6rem;
 }
 
 .image {
@@ -53,6 +61,51 @@
   filter: blur(0);
 }
 
+.achiev {
+  margin-bottom: 2.5rem;
+}
+
+.achievContainer {
+  display: grid;
+  grid-template-rows: repeat(auto-fill);
+  max-width: 45rem;
+  margin: 1rem auto;
+}
+
+.skillsContainer {
+  margin: 3rem 0;
+}
+
+.skills {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skillCard {
+  width: 8rem;
+  height: 8rem;
+  margin: 1rem;
+  background-color: cornsilk;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 3rem;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.skillCard p {
+  font-size: 1rem;
+}
+
 @media (max-width: 680px) {
   .container h1 {
     font-size: 2.2rem;
@@ -61,16 +114,17 @@
   .container h2 {
     color: #a5b3c5;
     margin-bottom: 0.6rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   .container p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .head {
     margin-bottom: 3.5rem;
   }
+
   .image {
     width: 15rem;
     height: 15rem;
@@ -105,11 +159,11 @@
   .container h2 {
     color: #a5b3c5;
     margin-bottom: 0.6rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .container p {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
 
   .head {

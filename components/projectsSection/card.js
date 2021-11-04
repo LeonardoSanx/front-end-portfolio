@@ -1,16 +1,13 @@
 import React from "react";
-import cardStyles from "../styles/Card.module.css";
-import { useEffect, useRef } from "react";
+import cardStyles from "../../styles/Projects/Card.module.css";
+import { useRef } from "react";
 import { isMobile } from "react-device-detect";
+import isOdd from "is-odd";
 
-const Card = ({ title, card_video, phone_video, link }) => {
+const Card = ({ len, title, card_video, phone_video, link, position }) => {
+  const direction = isOdd(len) === isOdd(position) ? "left" : "right";
   const video = useRef(null);
   const iphone_video = useRef(null);
-
-  // useEffect(() => {
-  //   video.current.defaultMuted = true;
-  //   iphone_video.current.defaultMuted = true;
-  // });
 
   const onMouseOver = () => {
     video.current.play();
@@ -26,6 +23,7 @@ const Card = ({ title, card_video, phone_video, link }) => {
   return (
     <a
       className={cardStyles.a}
+      id={direction == "left" ? cardStyles.aLeft : cardStyles.aRight}
       href={link}
       target="_blank"
       onMouseOver={onMouseOver}
