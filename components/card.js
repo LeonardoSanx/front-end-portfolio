@@ -4,14 +4,13 @@ import { useEffect, useRef } from "react";
 import { isMobile } from "react-device-detect";
 
 const Card = ({ title, card_video, phone_video, link }) => {
-  console.log(isMobile);
   const video = useRef(null);
   const iphone_video = useRef(null);
 
-  useEffect(() => {
-    video.current.defaultMuted = true;
-    iphone_video.current.defaultMuted = true;
-  });
+  // useEffect(() => {
+  //   video.current.defaultMuted = true;
+  //   iphone_video.current.defaultMuted = true;
+  // });
 
   const onMouseOver = () => {
     video.current.play();
@@ -36,24 +35,25 @@ const Card = ({ title, card_video, phone_video, link }) => {
         <div className={cardStyles.title}>
           <h2>{title}</h2>
         </div>
-        <div className={cardStyles.videoContainer}>
-          {isMobile ? (
-            <div
-              dangerouslySetInnerHTML={{
-                __html: `
+        {isMobile ? (
+          <div
+            className={cardStyles.videoContainer}
+            dangerouslySetInnerHTML={{
+              __html: `
             <video
               loop
               muted
               autoPlay
               playsInline
               ref={video}
-              src={../videos/${card_video}.mp4}
+              src="../videos/${card_video}.mp4"
               type="video/mp4"
               className={cardStyles.video}
             ></video>`,
-              }}
-            ></div>
-          ) : (
+            }}
+          ></div>
+        ) : (
+          <div className={cardStyles.videoContainer}>
             <video
               loop
               muted
@@ -62,13 +62,12 @@ const Card = ({ title, card_video, phone_video, link }) => {
               type="video/mp4"
               className={cardStyles.video}
             ></video>
-          )}
-        </div>
+          </div>
+        )}
         <div className={cardStyles.videoPhoneContainer}>
           <video
             loop
             muted
-            controls
             ref={iphone_video}
             src={`../videos/${phone_video}.mp4`}
             type="video/mp4"
