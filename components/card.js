@@ -35,6 +35,7 @@ const Card = ({ title, card_video, phone_video, link }) => {
             <video
               loop
               muted
+              controls
               ref={video}
               playing={true}
               src={`../videos/${card_video}.mp4`}
@@ -45,6 +46,7 @@ const Card = ({ title, card_video, phone_video, link }) => {
             <video
               loop
               muted
+              controls
               ref={video}
               src={`../videos/${card_video}.mp4`}
               type="video/mp4"
