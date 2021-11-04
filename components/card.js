@@ -1,6 +1,7 @@
 import React from "react";
 import cardStyles from "../styles/Card.module.css";
 import { useRef } from "react";
+import { isMobile } from "react-device-detect";
 
 const Card = ({ title, card_video, phone_video, link }) => {
   const video = useRef(null);
@@ -30,14 +31,26 @@ const Card = ({ title, card_video, phone_video, link }) => {
           <h2>{title}</h2>
         </div>
         <div className={cardStyles.videoContainer}>
-          <video
-            loop
-            muted
-            ref={video}
-            src={`../videos/${card_video}.mp4`}
-            type="video/mp4"
-            className={cardStyles.video}
-          ></video>
+          {isMobile ? (
+            <video
+              loop
+              muted
+              ref={video}
+              playing={true}
+              src={`../videos/${card_video}.mp4`}
+              type="video/mp4"
+              className={cardStyles.video}
+            ></video>
+          ) : (
+            <video
+              loop
+              muted
+              ref={video}
+              src={`../videos/${card_video}.mp4`}
+              type="video/mp4"
+              className={cardStyles.video}
+            ></video>
+          )}
         </div>
         <div className={cardStyles.videoPhoneContainer}>
           <video
