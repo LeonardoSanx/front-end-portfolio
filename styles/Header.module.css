@@ -3,7 +3,6 @@
   top: 0;
   width: 100%;
   height: 80px;
-  filter: blur(0);
   display: flex;
   z-index: 999;
 }
@@ -13,8 +12,10 @@
   width: 100%;
   height: 80px;
   backdrop-filter: blur(12px) saturate(150%);
-  background: rgba(15, 22, 36, 0.95);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  background: rgba(15, 22, 36, 0.9);
   box-shadow: 0 0 10px 10px rgba(15, 22, 36, 0.8);
+  z-index: 998;
 }
 
 .navbar {
@@ -23,6 +24,7 @@
   width: 100%;
   padding: 0 10%;
   justify-content: right;
+  z-index: 1000;
 }
 
 .links {
@@ -71,15 +73,19 @@
 
 @media (max-width: 650px) {
   .navbar {
-    padding: 5%;
+    padding: 0;
+    justify-content: center;
   }
+}
 
+@media (max-width: 410px) {
+  .navbar {
+    padding: 0;
+  }
   .navigation {
     font-size: 0.8rem;
   }
-
   .nav {
-    background-color: tomato;
-    padding-left: 0.5rem;
+    margin: 0 0.7rem;
   }
 }

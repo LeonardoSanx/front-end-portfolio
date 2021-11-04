@@ -5,8 +5,6 @@ import { useRef } from "react";
 const Card = ({ title, card_video, phone_video, link }) => {
   const video = useRef(null);
   const iphone_video = useRef(null);
-  // const video = document.getElementsByClassName("video");
-  // const video_phone = document.getElementsByClassName("phone_video");
 
   const onMouseOver = () => {
     video.current.play();
@@ -45,6 +43,7 @@ const Card = ({ title, card_video, phone_video, link }) => {
           <video
             loop
             muted
+            controls
             ref={iphone_video}
             src={`../videos/${phone_video}.mp4`}
             type="video/mp4"

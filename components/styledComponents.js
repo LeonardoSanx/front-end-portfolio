@@ -7,4 +7,8 @@ export const Section = styled.section`
   @media (max-width: 650px) {
     padding: 80px 8% 0 8%;
   }
+
+  @media (max-width: 410px) {
+    padding: 80px 5% 0 5%;
+  }
 `;

@@ -30,18 +30,22 @@ export const projects = [
   },
 ];
 
-export const timeline = [
+export const achievements = [
   {
-    year: "2021",
-    title: ["Graduated in Statistics at UFRJ", "FrontEnd Development"],
-    description: [
-      "The end of one journey is the beginning of others.",
-      "Started learning FrontEnd Development",
-    ],
+    id: 1,
+    date: "Oct-2021",
+    title: "Bachelor's Degree in Statistics - UFRJ",
+    description: "The end of one journey is the beginning of others.",
   },
   {
-    year: "2020",
-    title: ["Graduated in Statistics at UFRJ"],
-    description: ["The end of one journey is the beginning of others."],
+    year: "Sept-2021",
+    title: "FrontEnd Development - Career transition",
+    description: "Skills in JavaScript, HTML, CSS, React, Next and Tailwind.",
+  },
+  {
+    year: "jun-2019",
+    title: "Data Science Internship - Vale",
+    description:
+      "Health and Safety. Building, studying and maintaining metrics and dashboards.",
   },
 ];
