@@ -5,7 +5,7 @@ import Card from "./card";
 const Project = () => {
   return (
     <div className={projectsStyles.container}>
-      <h1>3</h1>
+      <h1>4</h1>
       {projects.map((project) => (
         <Card
           key={project.id}

@@ -4,8 +4,13 @@ import { useRef } from "react";
 import { isMobile } from "react-device-detect";
 
 const Card = ({ title, card_video, phone_video, link }) => {
+  console.log(isMobile);
   const video = useRef(null);
   const iphone_video = useRef(null);
+  useEffect(() => {
+    video.current.defaultMuted = true;
+    iphone_video.current.defaultMuted = true;
+  });
 
   const onMouseOver = () => {
     video.current.play();
@@ -36,7 +41,7 @@ const Card = ({ title, card_video, phone_video, link }) => {
               loop
               muted
               controls
-              autoplay
+              autoPlay
               ref={video}
               src={`../videos/${card_video}.mp4`}
               type="video/mp4"
