@@ -1,24 +1,30 @@
-import React from "react";
+import { React, useEffect, useState } from "react";
 import cardStyles from "../../styles/Projects/Card.module.css";
 import { useRef } from "react";
 import { isMobile } from "react-device-detect";
 import isOdd from "is-odd";
 
-const Card = ({ len, title, card_video, phone_video, link, position }) => {
+const Card = ({
+  len,
+  title,
+  card_video,
+  phone_video,
+  link,
+  position,
+  shouldPlay,
+}) => {
   const direction = isOdd(len) === isOdd(position) ? "left" : "right";
   const video = useRef(null);
   const iphone_video = useRef(null);
 
-  const onMouseOver = () => {
-    video.current.play();
-    iphone_video.current.play();
-  };
-  const onMouseOut = () => {
-    video.current.pause();
-    video.current.currentTime = 0;
-    iphone_video.current.pause();
-    iphone_video.current.currentTime = 0;
-  };
+  useEffect(() => {
+    shouldPlay
+      ? (video.current.play(), iphone_video.current.play())
+      : (video.current.pause(),
+        (video.current.currentTime = 0),
+        iphone_video.current.pause(),
+        (iphone_video.current.currentTime = 0));
+  }, [shouldPlay]);
 
   return (
     <a
@@ -26,8 +32,6 @@ const Card = ({ len, title, card_video, phone_video, link, position }) => {
       id={direction == "left" ? cardStyles.aLeft : cardStyles.aRight}
       href={link}
       target="_blank"
-      onMouseOver={onMouseOver}
-      onMouseOut={onMouseOut}
     >
       <div className={cardStyles.container}>
         <h2 id={cardStyles.title}>{title}</h2>

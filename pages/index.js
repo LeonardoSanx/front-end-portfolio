@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import homeStyles from "../styles/Home.module.css";
 import Header from "../components/header";
-import React from "react";
+import { React } from "react";
 import { Section } from "../components/styledComponents";
 import ProjectsSection from "../components/projectsSection";
 import HomeSection from "../components/homeSection";

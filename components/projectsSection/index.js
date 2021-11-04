@@ -1,9 +1,18 @@
 import projectsSectionStyles from "../../styles/Projects/ProjectsSection.module.css";
 import { projects } from "../../data";
+import { useEffect, useState } from "react";
 import Card from "./card";
-// import { isMobile } from "react-device-detect";
 
 const ProjectsSection = () => {
+  const [shouldPlay, setshouldPlay] = useState(false);
+  useEffect(() => {
+    window.onscroll = () => {
+      window.pageYOffset > 1800 && window.pageYOffset < 3600
+        ? setshouldPlay(true)
+        : setshouldPlay(false);
+    };
+  }, []);
+
   const projSize = projects.length;
   return (
     <div className={projectsSectionStyles.container}>
@@ -21,6 +30,7 @@ const ProjectsSection = () => {
             phone_video={project.phone_video}
             link={project.link}
             position={project.positionKey}
+            shouldPlay={shouldPlay}
           />
         ))}
       </div>
