@@ -7,6 +7,7 @@ const Card = ({ title, card_video, phone_video, link }) => {
   console.log(isMobile);
   const video = useRef(null);
   const iphone_video = useRef(null);
+
   useEffect(() => {
     video.current.defaultMuted = true;
     iphone_video.current.defaultMuted = true;
@@ -42,6 +43,8 @@ const Card = ({ title, card_video, phone_video, link }) => {
               muted
               controls
               autoPlay
+              playing={true}
+              playsInline
               ref={video}
               src={`../videos/${card_video}.mp4`}
               type="video/mp4"

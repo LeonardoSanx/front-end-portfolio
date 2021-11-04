@@ -1,11 +1,12 @@
 import projectsStyles from "../styles/Project.module.css";
 import { projects } from "../data";
 import Card from "./card";
+import { isMobile } from "react-device-detect";
 
 const Project = () => {
   return (
     <div className={projectsStyles.container}>
-      <h1>5</h1>
+      <h1>{isMobile} 6</h1>
       {projects.map((project) => (
         <Card
           key={project.id}

@@ -71,6 +71,10 @@
   .head {
     margin-bottom: 3.5rem;
   }
+  .image {
+    width: 15rem;
+    height: 15rem;
+  }
 
   .name {
     position: relative;
