@@ -35,25 +35,14 @@ const Card = ({ title, card_video, phone_video, link }) => {
         <div className={cardStyles.title}>
           <h2>{title}</h2>
         </div>
-        {isMobile ? (
-          <div
-            className={cardStyles.videoContainer}
-            dangerouslySetInnerHTML={{
-              __html: `
-            <video
-              loop
-              muted
-              autoPlay
-              playsInline
-              ref={video}
-              src="../videos/${card_video}.mp4"
-              type="video/mp4"
+        <div className={cardStyles.videoContainer}>
+          {isMobile ? (
+            <img
+              src={`../images/${card_video}.jpg`}
+              alt=""
               className={cardStyles.video}
-            ></video>`,
-            }}
-          ></div>
-        ) : (
-          <div className={cardStyles.videoContainer}>
+            />
+          ) : (
             <video
               loop
               muted
@@ -62,17 +51,25 @@ const Card = ({ title, card_video, phone_video, link }) => {
               type="video/mp4"
               className={cardStyles.video}
             ></video>
-          </div>
-        )}
+          )}
+        </div>
         <div className={cardStyles.videoPhoneContainer}>
-          <video
-            loop
-            muted
-            ref={iphone_video}
-            src={`../videos/${phone_video}.mp4`}
-            type="video/mp4"
-            className={cardStyles.phone_video}
-          ></video>
+          {isMobile ? (
+            <img
+              src={`../images/${phone_video}.jpeg`}
+              alt=""
+              className={cardStyles.phone_video}
+            />
+          ) : (
+            <video
+              loop
+              muted
+              ref={iphone_video}
+              src={`../videos/${phone_video}.mp4`}
+              type="video/mp4"
+              className={cardStyles.phone_video}
+            ></video>
+          )}
         </div>
         <div className={cardStyles.imageContainer}>
           <img src="./iphone.svg" alt="" className={cardStyles.img} />

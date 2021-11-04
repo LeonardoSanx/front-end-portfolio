@@ -35,15 +35,15 @@
 .videoPhoneContainer {
   position: absolute;
   top: -0.8%;
-  left: 65.3%;
+  left: 65%;
   width: 25.5%;
-  perspective: 1000px;
+  perspective: 1400px;
 }
 
 .phone_video {
   width: 100%;
   transform: rotateY(44deg) rotateX(10deg) scaleY(0.92);
-  border-radius: 20px;
+  border-radius: 15px;
 }
 
 @media (max-width: 1300px) {
@@ -61,6 +61,9 @@
 @media (max-width: 650px) {
   .container {
     width: 350px;
+  }
+  .phone_video {
+    border-radius: 10px;
   }
 }
 
