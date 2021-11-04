@@ -1,6 +1,6 @@
 import React from "react";
 import cardStyles from "../styles/Card.module.css";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { isMobile } from "react-device-detect";
 
 const Card = ({ title, card_video, phone_video, link }) => {
