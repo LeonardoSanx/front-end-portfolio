@@ -36,8 +36,8 @@ const Card = ({ title, card_video, phone_video, link }) => {
               loop
               muted
               controls
+              autoplay
               ref={video}
-              playing={true}
               src={`../videos/${card_video}.mp4`}
               type="video/mp4"
               className={cardStyles.video}
@@ -46,7 +46,6 @@ const Card = ({ title, card_video, phone_video, link }) => {
             <video
               loop
               muted
-              controls
               ref={video}
               src={`../videos/${card_video}.mp4`}
               type="video/mp4"
