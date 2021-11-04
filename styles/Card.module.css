@@ -62,9 +62,9 @@
   .container {
     width: 350px;
   }
-  .phone_video {
-    transform: rotateY(44deg) rotateX(10deg) scaleY(0.88);
-    border-radius: 10px;
+  .videoPhoneContainer {
+    position: absolute;
+    top: -1%;
   }
 }
 
