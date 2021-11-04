@@ -7,6 +7,7 @@ import { Section } from "../components/styledComponents";
 import ProjectsSection from "../components/projectsSection";
 import HomeSection from "../components/homeSection";
 import AboutSection from "../components/AboutSection";
+import ContactSection from "../components/ContactSection";
 
 export default function Home() {
   return (
@@ -25,13 +26,11 @@ export default function Home() {
         </Section>
 
         <Section id="projects">
-          <div className={homeStyles.projectsContainer}>
-            <ProjectsSection />
-          </div>
+          <ProjectsSection />
         </Section>
 
         <Section id="contact">
-          <div className={homeStyles.contactContainer}></div>
+          <ContactSection />
         </Section>
       </div>
     </div>

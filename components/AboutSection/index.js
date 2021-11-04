@@ -83,7 +83,7 @@ const AboutSection = () => {
           </div>
           <div className={aboutSectionStyles.skillCard}>
             <img
-              src="../../logos/Tailwind.png"
+              src="../../logos/Tail.png"
               alt=""
               className={aboutSectionStyles.logo}
             />
