@@ -34,7 +34,7 @@
 
 .videoPhoneContainer {
   position: absolute;
-  top: -0.8%;
+  top: -1.5%;
   left: 65%;
   width: 25.5%;
   perspective: 1400px;
@@ -42,7 +42,7 @@
 
 .phone_video {
   width: 100%;
-  transform: rotateY(44deg) rotateX(10deg) scaleY(0.92);
+  transform: rotateY(44deg) rotateX(10deg) scaleY(0.9);
   border-radius: 15px;
 }
 
@@ -56,15 +56,24 @@
   .container {
     width: 500px;
   }
+  .videoPhoneContainer {
+    position: absolute;
+    top: -1.5%;
+    left: 65%;
+    width: 25.5%;
+    perspective: 1000px;
+  }
+
+  .phone_video {
+    width: 100%;
+    transform: rotateY(44deg) rotateX(10deg) scaleY(0.89);
+    border-radius: 10px;
+  }
 }
 
 @media (max-width: 650px) {
   .container {
     width: 350px;
-  }
-  .videoPhoneContainer {
-    position: absolute;
-    top: -1%;
   }
 }
 
