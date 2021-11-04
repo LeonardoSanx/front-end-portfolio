@@ -38,18 +38,21 @@ const Card = ({ title, card_video, phone_video, link }) => {
         </div>
         <div className={cardStyles.videoContainer}>
           {isMobile ? (
+            <div
+              dangerouslySetInnerHTML={{
+                __html: `
             <video
               loop
               muted
-              controls
               autoPlay
-              playing={true}
               playsInline
               ref={video}
-              src={`../videos/${card_video}.mp4`}
+              src={../videos/${card_video}.mp4}
               type="video/mp4"
               className={cardStyles.video}
-            ></video>
+            ></video>`,
+              }}
+            ></div>
           ) : (
             <video
               loop
