@@ -30,9 +30,7 @@ const Card = ({ len, title, card_video, phone_video, link, position }) => {
       onMouseOut={onMouseOut}
     >
       <div className={cardStyles.container}>
-        <div className={cardStyles.title}>
-          <h2>{title}</h2>
-        </div>
+        <h2 id={cardStyles.title}>{title}</h2>
         <div className={cardStyles.videoContainer}>
           {isMobile ? (
             <img
