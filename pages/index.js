@@ -22,7 +22,7 @@ export default function Home() {
         : setshouldPlay(false);
     };
   }, []);
-  console.log(offset);
+  // console.log(offset);
 
   return (
     <div>

@@ -14,7 +14,7 @@ const ContactSection = () => {
         <div className={contactSectionStyles.emailContainer}>
           <form action="#" className={contactSectionStyles.form}>
             <h2 className={contactSectionStyles.h2}>Want to work together?</h2>
-            <p className={contactSectionStyles.p}>send me an E-mail</p>
+            <p className={contactSectionStyles.p}>send me an e-mail</p>
             <div className={contactSectionStyles.inputs}>
               <div className={contactSectionStyles.inputField}>
                 <FiUser className={contactSectionStyles.i} />
@@ -41,19 +41,17 @@ const ContactSection = () => {
               </div>
             </div>
             <div className={contactSectionStyles.messageContainer}>
-              <div>
-                <h5 className={contactSectionStyles.h5}>Message</h5>
-                <input
-                  type="text"
-                  className={contactSectionStyles.message}
-                  name="nome"
-                  // onkeydown="javascript: fMasc( this, Nome );"
-                />
-              </div>
+              <input
+                type="text"
+                placeholder="Message"
+                className={contactSectionStyles.message}
+                name="message"
+                // onkeydown="javascript: fMasc( this, Nome );"
+              />
             </div>
             <input
               type="submit"
-              value="Enviar"
+              value="Send"
               className={contactSectionStyles.submit}
               id="btn-up"
             />
