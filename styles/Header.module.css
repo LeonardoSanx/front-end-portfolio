@@ -53,16 +53,16 @@
   margin: 0 1rem;
 }
 
-.nav a {
+.a {
   color: #768ead;
 }
 
-.nav a:hover {
+.current {
   color: #daeaff;
 }
 
-.nav:hover {
-  color: lightseagreen;
+.a:hover {
+  color: #daeaff;
 }
 
 @media (max-width: 900px) {

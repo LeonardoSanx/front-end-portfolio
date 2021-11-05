@@ -5,10 +5,11 @@ import Card from "./card";
 
 const ProjectsSection = () => {
   const [shouldPlay, setshouldPlay] = useState(false);
+
   useEffect(() => {
     window.onscroll = () => {
-      window.pageYOffset > 1800 && window.pageYOffset < 3600
-        ? setshouldPlay(true)
+      window.pageYOffset > 1800
+        ? window.pageYOffset < 3600 && setshouldPlay(true)
         : setshouldPlay(false);
     };
   }, []);

@@ -1,0 +1,100 @@
+.line {
+  width: 5rem;
+  height: 2px;
+  border-radius: 2px;
+  margin: 2rem 0;
+  background: linear-gradient(to right, white 0%, rgb(70, 70, 70) 100%);
+}
+
+.container {
+  margin-bottom: 8rem;
+}
+
+.container h1 {
+  font-size: 3rem;
+}
+
+.container h2 {
+  color: #daeaff;
+  margin-bottom: 0.6rem;
+  font-size: 2rem;
+}
+
+.container p {
+  font-size: 1rem;
+  color: #768ead;
+  margin-bottom: 2rem;
+}
+
+.head {
+  margin-bottom: 5rem;
+}
+
+.contact {
+  justify-content: center;
+  display: flex;
+}
+
+.emailContainer {
+  min-width: 40rem;
+  border-radius: 10px;
+  border: 1px solid #768ead;
+  background-color: rgb(16, 24, 39);
+  text-align: center;
+  padding: 2rem 3rem;
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+
+.inputField {
+  max-width: 360px;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  width: 90%;
+  height: 35px;
+  border: 1px solid #768ead;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 0.4rem;
+  align-items: center;
+}
+
+.input {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: #768ead;
+}
+
+.input::placeholder {
+  color: #768ead;
+}
+
+.i {
+  color: #768ead;
+  font-size: 1rem;
+}
+
+@media (max-width: 680px) {
+  .container h1 {
+    font-size: 2.2rem;
+  }
+
+  .head {
+    margin-bottom: 3.5rem;
+  }
+}
+
+@media (max-width: 410px) {
+  .container h1 {
+    font-size: 2rem;
+  }
+
+  .head {
+    margin-bottom: 2.5rem;
+  }
+}
