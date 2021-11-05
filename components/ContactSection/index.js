@@ -78,7 +78,7 @@ const ContactSection = () => {
         <a className={contactSectionStyles.circle} href="/">
           <FiMail className={contactSectionStyles.icons} />
         </a>
-        <a className={contactSectionStyles.circle} href="tel:5521968339123">
+        <a className={contactSectionStyles.circle} href="tel:+55(021)968339123">
           <BsWhatsapp className={contactSectionStyles.icons} />
         </a>
       </div>
