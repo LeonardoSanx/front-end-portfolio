@@ -80,6 +80,36 @@
   font-size: 1rem;
 }
 
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 4rem 0;
+  /* background-color: blueviolet; */
+}
+
+.circle {
+  width: 4rem;
+  height: 4rem;
+  margin: 1rem;
+  background-color: none;
+  border: 1px solid #768ead;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #768ead;
+}
+
+.icons {
+  font-size: 1.5rem;
+}
+
+.circle:hover {
+  color: #daeaff;
+  border: 1px solid #daeaff;
+}
+
 @media (max-width: 920px) {
   .container h1 {
     font-size: 2.5rem;

@@ -1,6 +1,6 @@
 import contactSectionStyles from "../../styles/Contact/ContactSection.module.css";
 import { AiFillGithub } from "react-icons/ai";
-import { BsLinkedin } from "react-icons/bs";
+import { BsLinkedin, BsWhatsapp } from "react-icons/bs";
 import { FiMail, FiUser } from "react-icons/fi";
 
 const ContactSection = () => {
@@ -13,8 +13,8 @@ const ContactSection = () => {
       <div className={contactSectionStyles.contact}>
         <div className={contactSectionStyles.emailContainer}>
           <form action="#" className={contactSectionStyles.form}>
-            <h2 className={contactSectionStyles.h2}>Wanna work together?</h2>
-            <p className={contactSectionStyles.p}>send me an e-mail</p>
+            <h2 className={contactSectionStyles.h2}>Want to work together?</h2>
+            <p className={contactSectionStyles.p}>send me an E-mail</p>
             <div className={contactSectionStyles.inputs}>
               <div className={contactSectionStyles.inputField}>
                 <FiUser className={contactSectionStyles.i} />
@@ -60,23 +60,26 @@ const ContactSection = () => {
           </form>
         </div>
       </div>
-      <div className={contactSectionStyles.links}>
+      <div className={contactSectionStyles.social}>
         <a
-          className={contactSectionStyles.social}
+          className={contactSectionStyles.circle}
           href="https://github.com/LeonardoSanx"
           target="_blank"
         >
-          <AiFillGithub />
+          <AiFillGithub className={contactSectionStyles.icons} />
         </a>
         <a
-          className={contactSectionStyles.social}
+          className={contactSectionStyles.circle}
           href="https://www.linkedin.com/in/leonardo-sanches-machado-870827191/"
           target="_blank"
         >
-          <BsLinkedin />
+          <BsLinkedin className={contactSectionStyles.icons} />
         </a>
-        <a className={contactSectionStyles.social} href="/">
-          <FiMail />
+        <a className={contactSectionStyles.circle} href="/">
+          <FiMail className={contactSectionStyles.icons} />
+        </a>
+        <a className={contactSectionStyles.circle} href="tel:5521968339123">
+          <BsWhatsapp className={contactSectionStyles.icons} />
         </a>
       </div>
     </div>
