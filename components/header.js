@@ -9,7 +9,7 @@ const Header = ({ offset }) => {
           <li className={headerStyles.nav}>
             <a
               href="#home"
-              className={offset > 400 ? headerStyles.a : headerStyles.current}
+              className={offset < 400 ? headerStyles.current : headerStyles.a}
             >
               Home
             </a>

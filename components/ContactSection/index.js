@@ -24,7 +24,7 @@ const ContactSection = () => {
                     className={contactSectionStyles.input}
                     placeholder="Name"
                     name="nome"
-                    onkeydown="javascript: fMasc( this, Nome );"
+                    // onkeydown="javascript: fMasc( this, Nome );"
                   />
                 </div>
               </div>
@@ -47,7 +47,7 @@ const ContactSection = () => {
                   type="text"
                   className={contactSectionStyles.message}
                   name="nome"
-                  onkeydown="javascript: fMasc( this, Nome );"
+                  // onkeydown="javascript: fMasc( this, Nome );"
                 />
               </div>
             </div>

@@ -18,12 +18,13 @@ const Card = ({
   const iphone_video = useRef(null);
 
   useEffect(() => {
-    shouldPlay
-      ? (video.current.play(), iphone_video.current.play())
-      : (video.current.pause(),
-        (video.current.currentTime = 0),
-        iphone_video.current.pause(),
-        (iphone_video.current.currentTime = 0));
+    !isMobile &&
+      (shouldPlay
+        ? (video.current.play(), iphone_video.current.play())
+        : (video.current.pause(),
+          (video.current.currentTime = 0),
+          iphone_video.current.pause(),
+          (iphone_video.current.currentTime = 0)));
   }, [shouldPlay]);
 
   return (

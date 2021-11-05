@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import homeStyles from "../styles/Home.module.css";
 import Header from "../components/header";
 import { React, useEffect, useState } from "react";
@@ -11,12 +10,19 @@ import ContactSection from "../components/ContactSection";
 
 export default function Home() {
   const [offset, setoffset] = useState(0);
+  const [shouldPlay, setshouldPlay] = useState(false);
 
   useEffect(() => {
     window.onscroll = () => {
       setoffset(window.pageYOffset);
+      window.pageYOffset > 1800
+        ? window.pageYOffset < 3600
+          ? setshouldPlay(true)
+          : setshouldPlay(false)
+        : setshouldPlay(false);
     };
   }, []);
+  console.log(offset);
 
   return (
     <div>
@@ -34,7 +40,7 @@ export default function Home() {
         </Section>
 
         <Section id="projects">
-          <ProjectsSection />
+          <ProjectsSection shouldPlay={shouldPlay} />
         </Section>
 
         <Section id="contact">

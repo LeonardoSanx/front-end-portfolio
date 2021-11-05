@@ -64,6 +64,9 @@
 .a:hover {
   color: #daeaff;
 }
+.a:visited {
+  color: #768ead;
+}
 
 @media (max-width: 900px) {
   .navbar {
