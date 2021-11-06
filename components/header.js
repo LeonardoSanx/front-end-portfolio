@@ -33,7 +33,7 @@ const Header = ({ offset }) => {
               href="#projects"
               className={
                 offset > 2300
-                  ? offset < 3400
+                  ? offset < 3050
                     ? headerStyles.current
                     : headerStyles.a
                   : headerStyles.a
@@ -45,7 +45,7 @@ const Header = ({ offset }) => {
           <li className={headerStyles.nav}>
             <a
               href="#contact"
-              className={offset >= 3400 ? headerStyles.current : headerStyles.a}
+              className={offset >= 3050 ? headerStyles.current : headerStyles.a}
             >
               Contact
             </a>

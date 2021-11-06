@@ -8,7 +8,7 @@ import HomeSection from "../components/homeSection";
 import AboutSection from "../components/AboutSection";
 import ContactSection from "../components/ContactSection";
 
-export default function Home() {
+export default function Home({ service, template, user }) {
   const [offset, setoffset] = useState(0);
   const [shouldPlay, setshouldPlay] = useState(false);
 
@@ -22,7 +22,6 @@ export default function Home() {
         : setshouldPlay(false);
     };
   }, []);
-  // console.log(offset);
 
   return (
     <div>
@@ -40,14 +39,32 @@ export default function Home() {
         </Section>
 
         <Section id="projects">
-          <ProjectsSection shouldPlay={shouldPlay} />
+          <ProjectsSection />
         </Section>
 
         <Section id="contact">
-          <ContactSection />
+          <ContactSection
+            shouldPlay={shouldPlay}
+            service={service}
+            template={template}
+            user={user}
+          />
         </Section>
       </div>
     </div>
   );
 }
-// pos={window.scrollY}
+
+export async function getServerSideProps() {
+  const service = process.env.REACT_APP_SERVICE_ID;
+  const template = process.env.REACT_APP_TEMPLATE_ID;
+  const user = process.env.REACT_APP_USER_ID;
+
+  return {
+    props: {
+      service,
+      template,
+      user,
+    },
+  };
+}
