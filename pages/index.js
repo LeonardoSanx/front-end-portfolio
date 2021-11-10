@@ -26,7 +26,7 @@ export default function Home({ service, template, user }) {
   return (
     <div>
       <Head>
-        <title>FrontEnd Portfolio</title>
+        <title>Frontend Portfolio</title>
         <meta name="keywords" content="frontend portfolio" />
       </Head>
       <Header offset={offset} />

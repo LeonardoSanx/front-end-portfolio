@@ -5,7 +5,7 @@ const HomeSection = () => {
     <div className={homeSectionStyles.container}>
       <div className={homeSectionStyles.textContainer}>
         <h1 className={homeSectionStyles.title}>
-          Fron-End <br />
+          Front-end <br />
           Web Developer
         </h1>
         <p className={homeSectionStyles.text}>

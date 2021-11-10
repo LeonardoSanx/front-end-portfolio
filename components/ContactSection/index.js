@@ -155,7 +155,7 @@ const ContactSection = ({ service, template, user }) => {
         </a>
         <a
           className={contactSectionStyles.circle}
-          href={`${server}://wa.me/5521968339123?text=''`}
+          href={`${server}://wa.me/5521968339123?text=`}
           target="_blank"
         >
           <BsWhatsapp className={contactSectionStyles.icons} />

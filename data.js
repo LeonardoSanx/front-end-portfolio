@@ -44,7 +44,7 @@ export const achievements = [
   {
     id: 2,
     date: "Sept-2021",
-    title: "FrontEnd Development - Career transition",
+    title: "Frontend Development - Career transition",
     description: "Skills in JavaScript, HTML, CSS, React, Next and Tailwind.",
     positionKey: 2,
   },
